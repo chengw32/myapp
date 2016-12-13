@@ -10,8 +10,6 @@ public class SecondAcitivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second_acitivity);
-
-
-        Toast.makeText(this,"what",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"SecondAcitivity",Toast.LENGTH_SHORT).show();
     }
 }
