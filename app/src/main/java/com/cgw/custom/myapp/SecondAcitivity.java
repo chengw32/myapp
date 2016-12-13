@@ -2,6 +2,7 @@ package com.cgw.custom.myapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 public class SecondAcitivity extends AppCompatActivity {
 
@@ -9,5 +10,8 @@ public class SecondAcitivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second_acitivity);
+
+
+        Toast.makeText(this,"what",Toast.LENGTH_SHORT).show();
     }
 }
