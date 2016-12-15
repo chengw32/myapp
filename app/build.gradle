@@ -21,9 +21,11 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
     compile 'com.android.support:appcompat-v7:25.0.1'
     testCompile 'junit:junit:4.12'
+    //注解方式查找控件 绑定事件
+    compile 'com.jakewharton:butterknife:7.0.1'
+    //图片加载
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
 }
