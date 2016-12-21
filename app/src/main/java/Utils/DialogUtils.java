@@ -22,7 +22,7 @@ public class DialogUtils {
     private Dialog dl ;
     private void getDialog(Context context){
         if (null == dl){
-            dl = new Dialog(context);
+            dl = new Dialog(context,R.style.Translucent_NoTitle);
             dl.setContentView(R.layout.activity_main);
         }
     }

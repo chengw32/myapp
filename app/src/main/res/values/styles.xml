@@ -1,11 +1,34 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <!--&lt;!&ndash; Base application theme. &ndash;&gt;-->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--</style>-->
+
+    <style name="AppBaseTheme" parent="@style/android:Theme.Holo.Light"></style>
+
+    <style name="CustomWindowTitleBackground">
+        <item name="android:background">@android:color/black</item>
+    </style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowTitleSize">50dp</item>
+        <!--<item name="android:windowContentOverlay">@null</item>-->
+        <item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>
+    </style>
+
+    <style name="Translucent_NoTitle" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>-->
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:windowIsTranslucent">true</item>
     </style>
 
 </resources>

@@ -1,47 +1,60 @@
 package com.cgw.custom.myapp;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.cgw.custom.myapp.base.BaseActivity;
 
 import Utils.DialogUtils;
 import Utils.GlideUtil;
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
 
-    @Bind(R.id.textView2)
-    TextView mTextView2;
     @Bind(R.id.imageView)
     ImageView mImageView;
+    @Bind(R.id.textView2)
+    TextView mTextView2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-//        http://img.txt99.cc/Cover/24/24168.jpg
-//        mTextView2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                DialogUtils.getI().show(MainActivity.this);
-//            }
-//        });
+        initUI();
+    }
 
-        GlideUtil.showImage(this,"http://img.txt99.cc/Cover/24/24168.jpg",mImageView);
+    //
+    @Override
+    protected int setContentView() {
+        return R.layout.activity_main;
+    }
+
+    protected void initUI() {
+
+        mTextView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DialogUtils.getI().show(MainActivity.this);
+            }
+        });
+
+        GlideUtil.displayImageFromAct(this, "http://img.txt99.cc/Cover/24/24168.jpg", mImageView);
+//        GlideUtil.displayGif(this, "http://i.kinja-img.com/gawker-media/image/upload/s--B7tUiM5l--/gf2r69yorbdesguga10i.gif", mImageView);
+//        GlideUtil.displayImageFromAct(this, "http://i.kinja-img.com/gawker-media/image/upload/s--B7tUiM5l--/gf2r69yorbdesguga10i.gif", mImageView);
+    }
+
+    @Override
+    public void onClick(View view) {
+
     }
 
 
-    public void ssssss(View v) {
-    }
-
-    @OnClick(R.id.textView2)
-    public void onClick() {
-        DialogUtils.getI().show(MainActivity.this);
-    }
+//    @Override
+//    protected int setContentView() {
+//        return R.layout.activity_main;
+//    }
 }
