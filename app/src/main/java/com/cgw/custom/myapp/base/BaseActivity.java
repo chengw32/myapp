@@ -34,6 +34,9 @@ public abstract class BaseActivity extends FragmentActivity implements View.OnCl
         //第三步  这三步顺序是固定的
         getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.layout_title);
         MyApp.getI().addActivity(this);
+        //butternkife的初始化要在setcontnetview之后
+        ButterKnife.bind(this);
+        initUI();
     }
 
     protected abstract int setContentView();

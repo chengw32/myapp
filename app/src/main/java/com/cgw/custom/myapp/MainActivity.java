@@ -10,7 +10,6 @@ import com.cgw.custom.myapp.base.BaseActivity;
 import Utils.DialogUtils;
 import Utils.GlideUtil;
 import butterknife.Bind;
-import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity {
 
@@ -23,8 +22,6 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ButterKnife.bind(this);
-        initUI();
     }
 
     //
@@ -33,6 +30,7 @@ public class MainActivity extends BaseActivity {
         return R.layout.activity_main;
     }
 
+    @Override
     protected void initUI() {
 
         mTextView2.setOnClickListener(new View.OnClickListener() {
